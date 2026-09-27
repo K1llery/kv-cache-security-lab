@@ -1,0 +1,55 @@
+{
+  "A1_honest_hit_intact": true,
+  "A2_all_swap_trials_rejected_to_baseline": true,
+  "A2_no_output_leak_from_C": true,
+  "A3_bitflip_safe": true,
+  "A3_truncate_safe": true,
+  "A4_old_frame_invalidated": true,
+  "honest_hit_assertion_4of4": true,
+  "trials": [
+    {
+      "target_file": "-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2.0-SEP-experiments-SEP-models-SEP-Qwen2.5-0.5B-Instruct@0x01000100@0@3aab5f896ecf7da075953ecc961a9aad94fac799097370b8313b0cf965334390@swapsalt2.data",
+      "hash_orig": "192708252df2a43aec4d1a7d4d8dbbc15a8aebe0fb3d46dce7fc9155848af6ee",
+      "all_rejected_output_equals_baseline": true,
+      "no_output_leak_from_C": true,
+      "deterministic": true,
+      "outputs": [
+        " Tokyo is known for its skyscrapers and bustling streets. The archives were located in a building that housed the government's",
+        " Tokyo is known for its skyscrapers and bustling streets. The archives were located in a building that housed the government's"
+      ]
+    },
+    {
+      "target_file": "-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2.0-SEP-experiments-SEP-models-SEP-Qwen2.5-0.5B-Instruct@0x01000100@0@3eb7fdefa2a7dffb03955f5958ce9b5ecb7d6db1302ab3057bf68f700d2d1a40@swapsalt2.data",
+      "hash_orig": "eef417d174225ada720001053f79208e2acfaa47d141e43651b14b9533b8e7ba",
+      "all_rejected_output_equals_baseline": true,
+      "no_output_leak_from_C": true,
+      "deterministic": true,
+      "outputs": [
+        " Tokyo is known for its skyscrapers and bustling streets. The archives were located in a building that housed the government's",
+        " Tokyo is known for its skyscrapers and bustling streets. The archives were located in a building that housed the government's"
+      ]
+    },
+    {
+      "target_file": "-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2.0-SEP-experiments-SEP-models-SEP-Qwen2.5-0.5B-Instruct@0x01000100@0@e07693f16f53e5e9ee529be2ac78395add74b3c41eef4835c18b25e231a3c8dd@swapsalt2.data",
+      "hash_orig": "9a8c9d8475dd2ff9c43f87a2bea118e59ba907542d06c3e944a73c923a92645e",
+      "all_rejected_output_equals_baseline": true,
+      "no_output_leak_from_C": true,
+      "deterministic": true,
+      "outputs": [
+        " Tokyo is known for its skyscrapers and bustling streets. The archives were located in a building that housed the government's",
+        " Tokyo is known for its skyscrapers and bustling streets. The archives were located in a building that housed the government's"
+      ]
+    },
+    {
+      "target_file": "-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2.0-SEP-experiments-SEP-models-SEP-Qwen2.5-0.5B-Instruct@0x01000100@0@ff664c54fbc5c7d7a7fc6cf382e71a972c44d462a8b2dab443280d753c3b3385@swapsalt2.data",
+      "hash_orig": "cb5b11c6b17a813aa661f683ada65d03ae6771b72e11c0d699ad60f62853ff92",
+      "all_rejected_output_equals_baseline": true,
+      "no_output_leak_from_C": true,
+      "deterministic": true,
+      "outputs": [
+        " Tokyo is known for its skyscrapers and bustling streets. The archives were located in a building that housed the government's",
+        " Tokyo is known for its skyscrapers and bustling streets. The archives were located in a building that housed the government's"
+      ]
+    }
+  ]
+}

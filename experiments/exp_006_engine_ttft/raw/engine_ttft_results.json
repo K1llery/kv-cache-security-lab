@@ -1,0 +1,491 @@
+{
+  "meta": {
+    "model": "/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct",
+    "transfer_mode": "engine_driven",
+    "reps": 3,
+    "salt": "tenant-a",
+    "max_tokens": 8
+  },
+  "requests": [
+    {
+      "kind": "store_cold",
+      "prompt_reps": 8,
+      "ttft_ms": 555.1551699991251,
+      "total_ms": 643.222999999125,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-b10edbf849019e12\",\"object\":\"text_completion\",\"created\":1790487506,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b10edbf849019e12\",\"object\":\"text_completion\",\"created\":1790487506,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b10edbf849019e12\",\"object\":\"text_completion\",\"created\":1790487506,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b10edbf849019e12\",\"object\":\"text_completion\",\"created\":1790487506,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487507.3953063,
+      "note": null
+    },
+    {
+      "kind": "l1_warm",
+      "prompt_reps": 8,
+      "ttft_ms": 221.5507159999106,
+      "total_ms": 281.280956000046,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-ad23ebbe8a46f45a\",\"object\":\"text_completion\",\"created\":1790487512,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-ad23ebbe8a46f45a\",\"object\":\"text_completion\",\"created\":1790487512,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-ad23ebbe8a46f45a\",\"object\":\"text_completion\",\"created\":1790487512,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-ad23ebbe8a46f45a\",\"object\":\"text_completion\",\"created\":1790487512,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487512.8048465,
+      "note": null
+    },
+    {
+      "kind": "l1_warm",
+      "prompt_reps": 8,
+      "ttft_ms": 138.02526699873852,
+      "total_ms": 192.1724819985684,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-a6d1bce06d329945\",\"object\":\"text_completion\",\"created\":1790487512,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-a6d1bce06d329945\",\"object\":\"text_completion\",\"created\":1790487512,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-a6d1bce06d329945\",\"object\":\"text_completion\",\"created\":1790487512,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-a6d1bce06d329945\",\"object\":\"text_completion\",\"created\":1790487512,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487512.997064,
+      "note": null
+    },
+    {
+      "kind": "l2hit_warm",
+      "prompt_reps": 8,
+      "ttft_ms": 145.7544320001034,
+      "total_ms": 201.25093400019978,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-ad5025972b31b141\",\"object\":\"text_completion\",\"created\":1790487513,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-ad5025972b31b141\",\"object\":\"text_completion\",\"created\":1790487513,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-ad5025972b31b141\",\"object\":\"text_completion\",\"created\":1790487513,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-ad5025972b31b141\",\"object\":\"text_completion\",\"created\":1790487513,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487513.2035766,
+      "note": "clear=200"
+    },
+    {
+      "kind": "l2hit_warm",
+      "prompt_reps": 8,
+      "ttft_ms": 145.41364700016857,
+      "total_ms": 199.00705500003824,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-bc1bac0851912f33\",\"object\":\"text_completion\",\"created\":1790487514,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-bc1bac0851912f33\",\"object\":\"text_completion\",\"created\":1790487514,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-bc1bac0851912f33\",\"object\":\"text_completion\",\"created\":1790487514,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-bc1bac0851912f33\",\"object\":\"text_completion\",\"created\":1790487514,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487514.4353304,
+      "note": "clear=200"
+    },
+    {
+      "kind": "l2hit_warm",
+      "prompt_reps": 8,
+      "ttft_ms": 152.15149100004055,
+      "total_ms": 209.38663199922303,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-bd8c8824468b928f\",\"object\":\"text_completion\",\"created\":1790487515,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-bd8c8824468b928f\",\"object\":\"text_completion\",\"created\":1790487515,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-bd8c8824468b928f\",\"object\":\"text_completion\",\"created\":1790487515,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-bd8c8824468b928f\",\"object\":\"text_completion\",\"created\":1790487515,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487515.6642976,
+      "note": "clear=200"
+    },
+    {
+      "kind": "l2hit_cold",
+      "prompt_reps": 8,
+      "ttft_ms": 142.38798400037922,
+      "total_ms": 200.35387099960644,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-a6a1a0f236595e24\",\"object\":\"text_completion\",\"created\":1790487516,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-a6a1a0f236595e24\",\"object\":\"text_completion\",\"created\":1790487516,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-a6a1a0f236595e24\",\"object\":\"text_completion\",\"created\":1790487516,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-a6a1a0f236595e24\",\"object\":\"text_completion\",\"created\":1790487516,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487516.8755803,
+      "note": "fadvise_files=4"
+    },
+    {
+      "kind": "l2hit_cold",
+      "prompt_reps": 8,
+      "ttft_ms": 184.73840600017866,
+      "total_ms": 239.38149899913697,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-a584c5cf3c034e37\",\"object\":\"text_completion\",\"created\":1790487517,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-a584c5cf3c034e37\",\"object\":\"text_completion\",\"created\":1790487517,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-a584c5cf3c034e37\",\"object\":\"text_completion\",\"created\":1790487517,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-a584c5cf3c034e37\",\"object\":\"text_completion\",\"created\":1790487517,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487518.1261919,
+      "note": "fadvise_files=4"
+    },
+    {
+      "kind": "l2hit_cold",
+      "prompt_reps": 8,
+      "ttft_ms": 165.3340949997073,
+      "total_ms": 223.15180999976292,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-832c048793cd6a25\",\"object\":\"text_completion\",\"created\":1790487519,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-832c048793cd6a25\",\"object\":\"text_completion\",\"created\":1790487519,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-832c048793cd6a25\",\"object\":\"text_completion\",\"created\":1790487519,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-832c048793cd6a25\",\"object\":\"text_completion\",\"created\":1790487519,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487519.3572347,
+      "note": "fadvise_files=4"
+    },
+    {
+      "kind": "recompute",
+      "prompt_reps": 8,
+      "ttft_ms": 155.6371599999693,
+      "total_ms": 214.68620999985433,
+      "first_chunk": " ",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-9393fab7c6cbb993\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" \",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-9393fab7c6cbb993\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\"1\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-9393fab7c6cbb993\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\":\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-9393fab7c6cbb993\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" outline\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        ""
+      ],
+      "t_send_epoch": 1790487520.5745957,
+      "note": null
+    },
+    {
+      "kind": "recompute",
+      "prompt_reps": 8,
+      "ttft_ms": 148.0437099999108,
+      "total_ms": 202.36734900026931,
+      "first_chunk": " ",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-b65bcaeff1f56413\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" \",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b65bcaeff1f56413\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\"2\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b65bcaeff1f56413\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\":\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b65bcaeff1f56413\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" list\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        ""
+      ],
+      "t_send_epoch": 1790487520.777008,
+      "note": null
+    },
+    {
+      "kind": "recompute",
+      "prompt_reps": 8,
+      "ttft_ms": 131.68221399973845,
+      "total_ms": 189.9345709989575,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-bc0a3e3a8687f0c0\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-bc0a3e3a8687f0c0\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" Roman\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-bc0a3e3a8687f0c0\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" Empire\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-bc0a3e3a8687f0c0\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" was\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        ""
+      ],
+      "t_send_epoch": 1790487520.967008,
+      "note": null
+    },
+    {
+      "kind": "store_cold",
+      "prompt_reps": 32,
+      "ttft_ms": 336.46429799955513,
+      "total_ms": 423.32376500053215,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-a513cab01e2734e7\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-a513cab01e2734e7\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" Roman\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-a513cab01e2734e7\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" Empire\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-a513cab01e2734e7\",\"object\":\"text_completion\",\"created\":1790487520,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" was\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        ""
+      ],
+      "t_send_epoch": 1790487521.3904696,
+      "note": null
+    },
+    {
+      "kind": "l1_warm",
+      "prompt_reps": 32,
+      "ttft_ms": 793.3032580003783,
+      "total_ms": 855.0122080014262,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-9a4b2a7f74dde408\",\"object\":\"text_completion\",\"created\":1790487523,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-9a4b2a7f74dde408\",\"object\":\"text_completion\",\"created\":1790487523,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-9a4b2a7f74dde408\",\"object\":\"text_completion\",\"created\":1790487523,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-9a4b2a7f74dde408\",\"object\":\"text_completion\",\"created\":1790487523,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487524.7403488,
+      "note": null
+    },
+    {
+      "kind": "l1_warm",
+      "prompt_reps": 32,
+      "ttft_ms": 650.2715509996051,
+      "total_ms": 716.9953449993045,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-bb715a23a3c0f432\",\"object\":\"text_completion\",\"created\":1790487524,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-bb715a23a3c0f432\",\"object\":\"text_completion\",\"created\":1790487524,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-bb715a23a3c0f432\",\"object\":\"text_completion\",\"created\":1790487524,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-bb715a23a3c0f432\",\"object\":\"text_completion\",\"created\":1790487524,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487525.457384,
+      "note": null
+    },
+    {
+      "kind": "l2hit_warm",
+      "prompt_reps": 32,
+      "ttft_ms": 633.5979189989303,
+      "total_ms": 698.447013999612,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-b53e04cc433e2b8a\",\"object\":\"text_completion\",\"created\":1790487525,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b53e04cc433e2b8a\",\"object\":\"text_completion\",\"created\":1790487525,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b53e04cc433e2b8a\",\"object\":\"text_completion\",\"created\":1790487525,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b53e04cc433e2b8a\",\"object\":\"text_completion\",\"created\":1790487525,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487526.1587026,
+      "note": "clear=200"
+    },
+    {
+      "kind": "l2hit_warm",
+      "prompt_reps": 32,
+      "ttft_ms": 755.6381840004178,
+      "total_ms": 815.9398099996906,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-b9a0999a426755e0\",\"object\":\"text_completion\",\"created\":1790487527,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b9a0999a426755e0\",\"object\":\"text_completion\",\"created\":1790487527,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b9a0999a426755e0\",\"object\":\"text_completion\",\"created\":1790487527,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b9a0999a426755e0\",\"object\":\"text_completion\",\"created\":1790487527,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487528.003909,
+      "note": "clear=200"
+    },
+    {
+      "kind": "l2hit_warm",
+      "prompt_reps": 32,
+      "ttft_ms": 685.8716480001021,
+      "total_ms": 749.1412109993689,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-b2febc1b1f3838fd\",\"object\":\"text_completion\",\"created\":1790487529,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b2febc1b1f3838fd\",\"object\":\"text_completion\",\"created\":1790487529,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b2febc1b1f3838fd\",\"object\":\"text_completion\",\"created\":1790487529,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b2febc1b1f3838fd\",\"object\":\"text_completion\",\"created\":1790487529,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487529.7819462,
+      "note": "clear=200"
+    },
+    {
+      "kind": "l2hit_cold",
+      "prompt_reps": 32,
+      "ttft_ms": 711.4768770006776,
+      "total_ms": 763.6407490008423,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-b68ab3d42872aeff\",\"object\":\"text_completion\",\"created\":1790487530,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b68ab3d42872aeff\",\"object\":\"text_completion\",\"created\":1790487530,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b68ab3d42872aeff\",\"object\":\"text_completion\",\"created\":1790487530,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b68ab3d42872aeff\",\"object\":\"text_completion\",\"created\":1790487530,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487531.586617,
+      "note": "fadvise_files=19"
+    },
+    {
+      "kind": "l2hit_cold",
+      "prompt_reps": 32,
+      "ttft_ms": 780.6331730007514,
+      "total_ms": 838.331962000666,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-9b1105fc9c6d59c4\",\"object\":\"text_completion\",\"created\":1790487532,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-9b1105fc9c6d59c4\",\"object\":\"text_completion\",\"created\":1790487532,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-9b1105fc9c6d59c4\",\"object\":\"text_completion\",\"created\":1790487532,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-9b1105fc9c6d59c4\",\"object\":\"text_completion\",\"created\":1790487532,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487533.4370232,
+      "note": "fadvise_files=19"
+    },
+    {
+      "kind": "l2hit_cold",
+      "prompt_reps": 32,
+      "ttft_ms": 723.8526879991696,
+      "total_ms": 776.7670009998255,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-b597955506173a8c\",\"object\":\"text_completion\",\"created\":1790487534,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b597955506173a8c\",\"object\":\"text_completion\",\"created\":1790487534,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" history\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b597955506173a8c\",\"object\":\"text_completion\",\"created\":1790487534,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" and\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b597955506173a8c\",\"object\":\"text_completion\",\"created\":1790487534,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" significance\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":nu",
+        ""
+      ],
+      "t_send_epoch": 1790487535.2525733,
+      "note": "fadvise_files=19"
+    },
+    {
+      "kind": "recompute",
+      "prompt_reps": 32,
+      "ttft_ms": 715.1591469992127,
+      "total_ms": 768.717889999607,
+      "first_chunk": " ",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-9a98b8b99b4d1efb\",\"object\":\"text_completion\",\"created\":1790487536,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" \",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-9a98b8b99b4d1efb\",\"object\":\"text_completion\",\"created\":1790487536,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\"1\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-9a98b8b99b4d1efb\",\"object\":\"text_completion\",\"created\":1790487536,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\":\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-9a98b8b99b4d1efb\",\"object\":\"text_completion\",\"created\":1790487536,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" outline\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        ""
+      ],
+      "t_send_epoch": 1790487537.0574653,
+      "note": null
+    },
+    {
+      "kind": "recompute",
+      "prompt_reps": 32,
+      "ttft_ms": 616.1937600008969,
+      "total_ms": 673.6434590002318,
+      "first_chunk": " ",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-b3510aa2ab8245fd\",\"object\":\"text_completion\",\"created\":1790487537,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" \",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b3510aa2ab8245fd\",\"object\":\"text_completion\",\"created\":1790487537,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\"2\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b3510aa2ab8245fd\",\"object\":\"text_completion\",\"created\":1790487537,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\":\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-b3510aa2ab8245fd\",\"object\":\"text_completion\",\"created\":1790487537,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" list\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        ""
+      ],
+      "t_send_epoch": 1790487537.7311497,
+      "note": null
+    },
+    {
+      "kind": "recompute",
+      "prompt_reps": 32,
+      "ttft_ms": 610.9470279989182,
+      "total_ms": 670.8238549999805,
+      "first_chunk": " The",
+      "n_content_chunks": 8,
+      "raw_head": [
+        "data: {\"id\":\"cmpl-95034c95bb27d367\",\"object\":\"text_completion\",\"created\":1790487537,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" The\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-95034c95bb27d367\",\"object\":\"text_completion\",\"created\":1790487537,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" Roman\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-95034c95bb27d367\",\"object\":\"text_completion\",\"created\":1790487537,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" Empire\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        "",
+        "data: {\"id\":\"cmpl-95034c95bb27d367\",\"object\":\"text_completion\",\"created\":1790487537,\"model\":\"/home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct\",\"choices\":[{\"index\":0,\"text\":\" was\",\"logprobs\":null,\"finish_reason\":null,\"stop_reason\":null,\"prompt_token_ids\":null,\"token_ids\":null}]}",
+        ""
+      ],
+      "t_send_epoch": 1790487538.402035,
+      "note": null
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+# exp_008: 修正版引擎级 TTFT 对照（评审意见 2026-09-27 第 1、2 项）
+# 相对 exp_006 的修正（全部为测量有效性修正，不引入新机制）：
+#   1. 重算组用全新 cache_salt（逐次记录）实现真·无缓存：LMCache 键含 cache_salt，
+#      新 salt 必然 L1+L2 双未命中；并以服务端日志逐请求断言（旧 exp_006 的"重算"
+#      共享提示词前缀，实测 4/4、19/19 L2 命中——该组数据作废）。
+#   2. 提示词以 token-id 数组下发，长度即实测分词长度（不再用"P≈4096"）；
+#      同时记录引擎 usage（stream_options.include_usage）交叉核对。
+#   3. 每次正式请求前清 L1，保证命中状态一致（L2 组=L2 命中，重算组=全未命中）。
+#   4. 请求发送时间在发送前记录；TTFT=首个非空 content chunk。
+#   5. 等待异步写完成：轮询服务端日志 "Stored N tokens" 行计数增加 + 落盘对象数稳定，
+#      不再固定 sleep 5s。
+#   6. 新增明文 L2 对照栈（同一引擎/传输/模型/提示词/预算，仅 L2 适配器无 serde）。
+#   7. 服务启动预热请求单独标记，不入正式统计。
+# 参数来源：
+#   review_20260927_v2 = 评审意见（本次工作单）
+#   exp003_verified    = exp_003 已验证组合（engine_driven、L1=2GB、util=0.35、AES-128-GCM）
+
+model: /home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct
+transfer_mode: engine_driven      # source: exp003_verified
+l1_size_gb: 2
+gpu_mem_util: 0.35
+stacks:
+  - id: aead_l2                   # AES-GCM L2（帧 [1B ver][12B iv][ct||tag]，AAD=None，hkdf(salt)）
+    serde: aesgcm
+  - id: plain_l2                  # 明文 L2（无 serde）
+    serde: none
+points_token_exact: [1024, 5000, 8192]   # source: review_20260927_v2（约1K/5K/8K，token-id 精确下发）
+block_tokens: 256                       # source: public_doc（LMCache chunk）
+groups:
+  l2hit_warm: 10       # source: review_20260927_v2（每关键工作点 ≥10 次有效请求）
+  l2hit_cold: 5        # 受控冷读（fadvise DONTNEED）
+  recompute: 10        # 全新 salt 逐次记录，逐请求断言 0 命中
+max_tokens: 8
+temperature: 0.0
+assertions:            # 逐请求断言（写入 raw/requests.jsonl，任一失败计入 failed_assertions）
+  l2hit: "存在本请求 id 的 Prefetch 行 (0 L1, N L2) 且 N==ceil(len/256)；Retrieved 行在窗口内"
+  recompute: "无本请求 id 的 retained>0 Prefetch 行；窗口内出现 Stored 行（证明发生了计算）"
+warmup_requests: 2     # source: review_20260927_v2（区分启动预热与正式测量）

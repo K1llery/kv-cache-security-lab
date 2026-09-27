@@ -1,0 +1,23 @@
+# exp_006: engine_driven 模式内真实 TTFT 与阶段时点（复核文档关口第 2 项）
+# 参数来源：
+#   review_20260927 = 选题与03实验复核_20260927.md（同 engine_driven 模式测真实 TTFT 与
+#                     读取/AEAD/CPU→GPU/完成通知/调度恢复各时点；热页缓存与受控冷读分开）
+#   exp003_verified = exp_003 已验证组合（engine_driven、L1=2GB、util=0.35、AES-128-GCM、
+#                     salt=tenant-a、端口 8321/6555/8080）
+#   local_adapt     = 本机适配
+model: /home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct
+transfer_mode: engine_driven    # source: exp003_verified（唯一在本机可运行的上游加密路径）
+l1_size_gb: 2                   # source: exp003_verified
+gpu_mem_util: 0.35              # source: exp003_verified
+prefix_targets: [1024, 4096]    # source: local_adapt（P=1024 为 exp_003 锚点复用；P=4096 为引擎侧第二点）
+max_tokens: 8                   # source: local_adapt（TTFT 只看首 chunk；8 token 足够触发流式首包）
+temperature: 0.0
+reps_l2hit: 3                   # source: review_20260927（n≥3 起步，报离散度）
+blocks:
+  l1_warm: 2        # L1 命中（不清 L1）
+  l2hit_warm: 3     # 清 L1 后 L2 命中，页缓存热
+  l2hit_cold: 3     # 清 L1 + posix_fadvise(DONTNEED) 逐出 blob 页缓存（受控冷读）
+  recompute: 3      # 从未缓存过的新 prompt（等长）→ 引擎重算基线
+metrics: [ttft_first_chunk_ms, total_ms, server_prefetch_window, l2_hit_confirmed]
+# 阶段时点说明：server 侧从日志抽取 Prefetch/Retrieved 行的墙钟时点；读取/AEAD/H2D 的
+# 细粒度分解需要 patch lmcache 插桩，列为后续项（本实验先固定"日志可得时点"口径）。

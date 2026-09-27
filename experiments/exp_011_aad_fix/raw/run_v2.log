@@ -1,0 +1,38 @@
+prompts 1024 tok; shared 768; tails equal: True
+[32;20m[2026-09-27 17:18:36,446] LMCache INFO:[0m torch_dev=<module 'torch.cuda' from '/home/mr/projects/科研训练2.0/experiments/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py'>, torch_device_type=cuda [3m(_device_detect.py:311:lmcache.v1.platform._device_detect)[0m
+[32;20m[2026-09-27 17:18:36,446] LMCache INFO:[0m Auto-selected backend [cuda] for accelerator 'cuda' from candidate backends [cuda, rocm]. [3m(__init__.py:149:lmcache.v1.platform)[0m
+A4-component old-frame under new serde: InvalidTag (期望 InvalidTag)
+phase OLD: old frames stored (completion 0.7s), files=8
+A4 e2e: lookup=[] rejects=4 retrieved_n=0 out==baseline:True
+A1: O_B_hit==O_B_true:True lookup=[(0, 4)] retrieved_n=1 (store 0.8s)
+O_C_hit=' Paris was bustling with activity, and the delegates were eager to sig'
+[32;20m[2026-09-27 17:19:32,082] LMCache INFO:[0m Using blake3 hash function [3m(token_hasher.py:79:lmcache.v1.multiprocess.token_hasher)[0m
+[32;20m[2026-09-27 17:19:32,082] LMCache INFO:[0m Computed NONE_HASH=b"~>\xff\x9e\xf7a:P4\x0e\xb1&w\xee\x03\xb8:\xc7Y\xfc\xba\x9b\xb3'\x05\xf0rH\xd5mG;" using hash function [3m(token_hasher.py:180:lmcache.v1.multiprocess.token_hasher)[0m
+[32;20m[2026-09-27 17:19:32,082] LMCache INFO:[0m TokenHasher initialized: chunk_size=256, hash_algorithm=blake3 [3m(token_hasher.py:67:lmcache.v1.multiprocess.token_hasher)[0m
+  swap->-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2...: lookup=[] rejects=4 out=' Tokyo is known for its skyscrapers and bust'
+  -> verdict: rejected_to_baseline=True no_leak=True
+  swap->-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2...: lookup=[] rejects=4 out=' Tokyo is known for its skyscrapers and bust'
+  -> verdict: rejected_to_baseline=True no_leak=True
+  swap->-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2...: lookup=[] rejects=4 out=' Tokyo is known for its skyscrapers and bust'
+  -> verdict: rejected_to_baseline=True no_leak=True
+  swap->-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2...: lookup=[] rejects=4 out=' Tokyo is known for its skyscrapers and bust'
+  -> verdict: rejected_to_baseline=True no_leak=True
+ACCEPTANCE A2: 4/4 swap trials rejected to baseline
+disk files changed after trials: 0 []
+REVERSIBLE: True
+  bitflip#0: rejects=4 out==true:True
+  bitflip#1: rejects=4 out==true:True
+  truncate#0: rejects=0 out==true:True
+  truncate#1: rejects=0 out==true:True
+{
+ "A1_honest_hit_intact": true,
+ "A2_all_swap_trials_rejected_to_baseline": true,
+ "A2_no_output_leak_from_C": true,
+ "A3_bitflip_safe": true,
+ "A3_truncate_safe": false,
+ "A4_e2e_oldframe_invalidated_recompute": true,
+ "A4_e2e_reject_lines": 4,
+ "A4_component_check": "InvalidTag",
+ "reversible_recheck": true
+}
+EXP011_V2_OK

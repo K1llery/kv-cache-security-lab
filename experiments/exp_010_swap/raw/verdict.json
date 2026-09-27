@@ -1,0 +1,56 @@
+{
+  "n_aligned_trials": 2,
+  "n_misaligned_trials": 2,
+  "swap_all_deterministic": true,
+  "primary_silent_misuse": true,
+  "reversible_recheck": true,
+  "files_rewritten_after_load": 0,
+  "bitflip_all_rejected": true,
+  "truncate_all_rejected": true,
+  "trials": [
+    {
+      "target_file": "-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2.0-SEP-experiments-SEP-models-SEP-Qwen2.5-0.5B-Instruct@0x01000100@0@3aab5f896ecf7da075953ecc961a9aad94fac799097370b8313b0cf965334390@swapsalt.data",
+      "hash_orig": "c07de7c0a7a3a7e3",
+      "aligned": false,
+      "misaligned": true,
+      "deterministic": true,
+      "outputs": [
+        " Paris was bustling with activity, and the delegates were eager to sign the accord. The archive room was quiet, and the",
+        " Paris was bustling with activity, and the delegates were eager to sign the accord. The archive room was quiet, and the"
+      ]
+    },
+    {
+      "target_file": "-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2.0-SEP-experiments-SEP-models-SEP-Qwen2.5-0.5B-Instruct@0x01000100@0@3eb7fdefa2a7dffb03955f5958ce9b5ecb7d6db1302ab3057bf68f700d2d1a40@swapsalt.data",
+      "hash_orig": "c3b596b5301eb17a",
+      "aligned": true,
+      "misaligned": false,
+      "deterministic": true,
+      "outputs": [
+        " Paris was bustling with activity, and the delegates were eager to sign the treaty. The archive room was quiet, and the",
+        " Paris was bustling with activity, and the delegates were eager to sign the treaty. The archive room was quiet, and the"
+      ]
+    },
+    {
+      "target_file": "-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2.0-SEP-experiments-SEP-models-SEP-Qwen2.5-0.5B-Instruct@0x01000100@0@e07693f16f53e5e9ee529be2ac78395add74b3c41eef4835c18b25e231a3c8dd@swapsalt.data",
+      "hash_orig": "ac6adb9111febb74",
+      "aligned": false,
+      "misaligned": true,
+      "deterministic": true,
+      "outputs": [
+        " Paris, the capital of France, The city of Paris, the capital of France, The city of Paris, the capital",
+        " Paris, the capital of France, The city of Paris, the capital of France, The city of Paris, the capital"
+      ]
+    },
+    {
+      "target_file": "-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2.0-SEP-experiments-SEP-models-SEP-Qwen2.5-0.5B-Instruct@0x01000100@0@ff664c54fbc5c7d7a7fc6cf382e71a972c44d462a8b2dab443280d753c3b3385@swapsalt.data",
+      "hash_orig": "d5b0ce759e90568e",
+      "aligned": true,
+      "misaligned": false,
+      "deterministic": true,
+      "outputs": [
+        " Paris was bustling with activity, and the delegates were eager to sign the treaty. The archive room was quiet, and the",
+        " Paris was bustling with activity, and the delegates were eager to sign the treaty. The archive room was quiet, and the"
+      ]
+    }
+  ]
+}

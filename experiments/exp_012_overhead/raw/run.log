@@ -1,0 +1,19 @@
+[aesgcm_P1024] store files stable 1.3s (summary line seen: True)
+[aesgcm_P1024] l2hit asserted 10/10
+[aesgcm_aad_P1024] store files stable 1.0s (summary line seen: True)
+[aesgcm_aad_P1024] l2hit asserted 10/10
+[aesgcm_aad_P5000] store files stable -0.8s (summary line seen: True)
+[aesgcm_aad_P5000] l2hit asserted 10/10
+  thr wave: wall=3688.7ms ttfts=[2898.1, 2931.0, 2974.4, 2975.7] lookups=[1, 1, 1, 1]
+  thr wave: wall=3333.5ms ttfts=[2632.7, 2671.0, 2670.3, 2670.7] lookups=[1, 1, 1, 1]
+  thr wave: wall=3403.6ms ttfts=[2716.4, 2764.4, 2763.7, 2762.7] lookups=[1, 1, 1, 1]
+[aesgcm_P5000] store files stable 1.8s (summary line seen: True)
+[aesgcm_P5000] l2hit asserted 10/10
+  thr wave: wall=3507.0ms ttfts=[2811.1, 2871.1, 2872.0, 2869.9] lookups=[1, 1, 1, 1]
+  thr wave: wall=3369.6ms ttfts=[2630.3, 2677.8, 2676.7, 2676.0] lookups=[1, 1, 1, 1]
+  thr wave: wall=3280.2ms ttfts=[2571.6, 2619.7, 2620.2, 2619.4] lookups=[1, 1, 1, 1]
+[aesgcm_P8192] store files stable 1.9s (summary line seen: True)
+[aesgcm_P8192] l2hit asserted 10/10
+[aesgcm_aad_P8192] store files stable 1.9s (summary line seen: True)
+[aesgcm_aad_P8192] l2hit asserted 10/10
+EXP012_RUN_OK

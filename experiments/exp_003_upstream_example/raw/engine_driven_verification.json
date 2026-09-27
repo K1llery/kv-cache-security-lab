@@ -1,0 +1,24 @@
+{
+  "experiment": "exp_003_upstream_example",
+  "transport": "engine_driven (worker-side copy; no CUDA IPC)",
+  "model": "Qwen2.5-0.5B-Instruct",
+  "runtime_directory": "/home/mr/projects/科研训练2.0/experiments/exp_003_upstream_example/runtime/engine_driven_20260927_122642",
+  "server_log": "/home/mr/projects/科研训练2.0/experiments/exp_003_upstream_example/runtime/engine_driven_20260927_122642/lmcache.log",
+  "vllm_log": "/home/mr/projects/科研训练2.0/experiments/exp_003_upstream_example/runtime/engine_driven_20260927_122642/vllm.log",
+  "run_log": "/home/mr/projects/科研训练2.0/experiments/exp_003_upstream_example/runtime/engine_driven_20260927_122642/run.log",
+  "encrypted_disk_objects": 4,
+  "all_frame_version_01": true,
+  "l1_clear_confirmed": true,
+  "prefetch": {
+    "retained": 4,
+    "requested": 4,
+    "l1": 0,
+    "l2": 4
+  },
+  "two_successful_responses": true,
+  "response_excerpts_equal": true,
+  "store_1024_tokens_confirmed": true,
+  "retrieve_1024_tokens_confirmed": true,
+  "invalid_tag_seen": false,
+  "verified": true
+}

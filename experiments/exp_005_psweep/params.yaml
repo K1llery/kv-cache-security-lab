@@ -1,0 +1,22 @@
+# exp_005: 恢复 vs 重算的前缀长度扫描（复核文档"下一道去留关口"第 1 项）
+# 参数来源（08 纪律）：
+#   review_20260927 = 选题与03实验复核_20260927.md（P=2K/8K，资源允许再到 32K；记录真实 S、
+#                     模型上下文上限、峰值内存；变体轮转、增重复、报离散度与写入成本）
+#   doc10           = 10_本科科研训练选题建议（512/2K/8K 为实验设计点）
+#   inherited       = exp_004 已验证装置（AES-GCM 帧格式/逐层消费/sanity checks 不变）
+#   firstweek_default = 第一周默认（W=2 固定；W 扫描属 exp_007）
+
+model_path: /home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct
+prefix_list: [2048, 8192, 32000]   # source: review_20260927（32K 级：32000+69 ≤ 上下文上限 32768）
+suffix_tokens: 69                  # source: inherited（真实分词后 S=69，逐点记录）
+block_tokens: 256                  # source: public_doc（LMCache chunk）
+aes_bits: 128
+hkdf_info_prefix: "exp004-aesgcm-verify"   # 与 exp_004 同域，便于交叉核对
+cache_salt: "tenant-a"
+window_W: 2                        # source: firstweek_default（W 扫描在 exp_007）
+reps: 5                            # source: review_20260927（增加重复、报离散度）
+variant_rotation: true             # source: review_20260927（修复 exp_004 固定顺序的 warmup 偏差）
+cold_read_mode: both               # warm | cold | both；cold = posix_fadvise(POSIX_FADV_DONTNEED) 逐次逐出 blob 页缓存（无需 root）
+record_peak_gpu_mem: true          # source: review_20260927（峰值内存）
+variants: [recompute, plain_layer, aead_whole, aead_layer, aead_layer_block]
+metrics: [ttft_proxy_ms, crossover_point, peak_gpu_mem, store_cost_per_variant, kv_bytes_per_token, real_S_per_P]

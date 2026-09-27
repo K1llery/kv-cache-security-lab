@@ -1,0 +1,28 @@
+# exp_004: 第一周最小原型测量参数（每项标注来源，08 纪律）
+#   overview_doc       = 集大成_项目总览与迁移指南 §7
+#   doc10              = 10_本科科研训练选题建议（第一周任务/工作负载要点）
+#   public_doc         = 公开资料（LMCache 博客/chunk 定义）
+#   upstream_code      = LMCache@9a7b605 源码默认
+#   local_adapt        = 本机 12GB 显存适配
+#   firstweek_default  = 第一周默认值（后续 sweep 再变）
+
+model_path: /home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct  # source: overview_doc（0.5B–3B）
+prefix_tokens: 1024     # source: doc10（短/长命中前缀的第一档；后续 sweep 512/2K/8K）
+suffix_tokens_cap: 128  # source: doc10（未命中后缀第一档上限）
+suffix_tokens_actual: 69  # source: local_benchmark（本次生成文本仅 69 token；结果以 raw/results.json 为准）
+block_tokens: 256       # source: public_doc（LMCache 256-token chunk）
+aes_bits: 128           # source: upstream_code（aesgcm 默认）
+hkdf_info_prefix: "exp004-aesgcm-verify"   # source: sanity
+cache_salt: "tenant-a"                     # source: upstream_example
+window_W: 2             # source: firstweek_default（固定预取窗口；在线策略留待 RQ2）
+reps: 5                 # source: doc10（重复独立运行报离散度）
+variants:               # 六个对照，全部 verified-before-use（除 recompute 无缓存概念）
+  - recompute           # 重算前缀（不读缓存）
+  - plain_layerwise     # 明文逐层+预取（无认证，性能归因用）
+  - aead_whole          # 粗粒度：整份 KV 一条 AEAD 记录（收齐认证完才能用）
+  - aead_layer          # 细粒度：每层一条记录 + 预取 W
+  - aead_layer_block    # 细粒度：每(层,256token块)一条记录 + 预取 W
+  - aead_layer_tamper   # 故障注入：单条记录翻 1 字节 → 必须 InvalidTag 终止请求
+metrics: [ttft_proxy_ms, per_layer_read_auth_compute_timeline, kv_byte_identity, first_token_match]  # source: doc10
+page_cache_regime: warm # source: local_adapt（无 root，不做 drop_caches；冷读为后续受控实验——a3 警告已遵守）
+device: cuda_bf16       # source: local_adapt

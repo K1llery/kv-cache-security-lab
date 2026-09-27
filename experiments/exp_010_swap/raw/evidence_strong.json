@@ -1,0 +1,105 @@
+{
+  "verdict_strong": {
+    "n_swap_trials": 4,
+    "reps_per_trial": 2,
+    "aligned_trials_deterministic": true,
+    "all_trials_changed_from_honest_b": true,
+    "all_trials_l2_hit_4of4_asserted": true,
+    "at_least_one_output_equals_O_C_hit": true,
+    "aligned_chunk_indices": [
+      2,
+      3
+    ],
+    "chunk3_aligned": true,
+    "hash_recipe_confirmed": true,
+    "silent_misuse_confirmed": true
+  },
+  "trials_evidence": [
+    {
+      "target_file_full": "-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2.0-SEP-experiments-SEP-models-SEP-Qwen2.5-0.5B-Instruct@0x01000100@0@3aab5f896ecf7da075953ecc961a9aad94fac799097370b8313b0cf965334390@swapsalt.data",
+      "target_sha256_full": "c07de7c0a7a3a7e34ddf6a3dfa2518bc7be220f149dbc51f6f06f46b32895564",
+      "target_chunk_index_b": 1,
+      "outputs": [
+        " Paris was bustling with activity, and the delegates were eager to sign the accord. The archive room was quiet, and the",
+        " Paris was bustling with activity, and the delegates were eager to sign the accord. The archive room was quiet, and the"
+      ],
+      "aligned_output_equals_O_C_hit": false
+    },
+    {
+      "target_file_full": "-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2.0-SEP-experiments-SEP-models-SEP-Qwen2.5-0.5B-Instruct@0x01000100@0@3eb7fdefa2a7dffb03955f5958ce9b5ecb7d6db1302ab3057bf68f700d2d1a40@swapsalt.data",
+      "target_sha256_full": "c3b596b5301eb17a18acda41148a9c306ac87ef767fd23a3c726562344d2f44a",
+      "target_chunk_index_b": 2,
+      "outputs": [
+        " Paris was bustling with activity, and the delegates were eager to sign the treaty. The archive room was quiet, and the",
+        " Paris was bustling with activity, and the delegates were eager to sign the treaty. The archive room was quiet, and the"
+      ],
+      "aligned_output_equals_O_C_hit": true
+    },
+    {
+      "target_file_full": "-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2.0-SEP-experiments-SEP-models-SEP-Qwen2.5-0.5B-Instruct@0x01000100@0@e07693f16f53e5e9ee529be2ac78395add74b3c41eef4835c18b25e231a3c8dd@swapsalt.data",
+      "target_sha256_full": "ac6adb9111febb748e4a0d66c480865bd00a9c442f89d845264ec4429e7f6f8c",
+      "target_chunk_index_b": 0,
+      "outputs": [
+        " Paris, the capital of France, The city of Paris, the capital of France, The city of Paris, the capital",
+        " Paris, the capital of France, The city of Paris, the capital of France, The city of Paris, the capital"
+      ],
+      "aligned_output_equals_O_C_hit": false
+    },
+    {
+      "target_file_full": "-SEP-home-SEP-mr-SEP-projects-SEP-科研训练2.0-SEP-experiments-SEP-models-SEP-Qwen2.5-0.5B-Instruct@0x01000100@0@ff664c54fbc5c7d7a7fc6cf382e71a972c44d462a8b2dab443280d753c3b3385@swapsalt.data",
+      "target_sha256_full": "d5b0ce759e90568ed9560a96c935f0b14868f42982c8bfe9f88266acf12439f1",
+      "target_chunk_index_b": 3,
+      "outputs": [
+        " Paris was bustling with activity, and the delegates were eager to sign the treaty. The archive room was quiet, and the",
+        " Paris was bustling with activity, and the delegates were eager to sign the treaty. The archive room was quiet, and the"
+      ],
+      "aligned_output_equals_O_C_hit": true
+    }
+  ],
+  "checks": [
+    {
+      "target_chunk_index": 1,
+      "deterministic": true,
+      "changed_from_honest_b": true,
+      "l2_hit_asserted": true,
+      "output_equals_O_C_hit": false,
+      "outputs": [
+        " Paris was bustling with activity, and the delegates were ea",
+        " Paris was bustling with activity, and the delegates were ea"
+      ]
+    },
+    {
+      "target_chunk_index": 2,
+      "deterministic": true,
+      "changed_from_honest_b": true,
+      "l2_hit_asserted": true,
+      "output_equals_O_C_hit": true,
+      "outputs": [
+        " Paris was bustling with activity, and the delegates were ea",
+        " Paris was bustling with activity, and the delegates were ea"
+      ]
+    },
+    {
+      "target_chunk_index": 0,
+      "deterministic": true,
+      "changed_from_honest_b": true,
+      "l2_hit_asserted": true,
+      "output_equals_O_C_hit": false,
+      "outputs": [
+        " Paris, the capital of France, The city of Paris, the capita",
+        " Paris, the capital of France, The city of Paris, the capita"
+      ]
+    },
+    {
+      "target_chunk_index": 3,
+      "deterministic": true,
+      "changed_from_honest_b": true,
+      "l2_hit_asserted": true,
+      "output_equals_O_C_hit": true,
+      "outputs": [
+        " Paris was bustling with activity, and the delegates were ea",
+        " Paris was bustling with activity, and the delegates were ea"
+      ]
+    }
+  ]
+}

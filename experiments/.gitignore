@@ -1,0 +1,10 @@
+.venv/
+models/
+__pycache__/
+*.pyc
+exp_003_upstream_example/runtime/
+exp_004_firstweek_measure/data/*.blob
+upstream/
+
+# 实验主密钥不入库（历史提交中已出现过 4 个本地测试密钥；共享材料前需清洗历史或声明密钥为一次性实验材料）
+**/master.key

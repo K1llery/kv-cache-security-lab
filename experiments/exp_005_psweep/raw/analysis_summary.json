@@ -1,0 +1,467 @@
+{
+  "warm": {
+    "regime": "warm_pagecache",
+    "points": [
+      {
+        "P": 2048,
+        "S": 69,
+        "kv_MiB": 24.0,
+        "store": {
+          "aead_whole": {
+            "records": 1,
+            "bytes": 25165853,
+            "store_fsync_ms": 131.740949
+          },
+          "aead_layer": {
+            "records": 24,
+            "bytes": 25166520,
+            "store_fsync_ms": 35.726937
+          },
+          "plain_layer": {
+            "records": 24,
+            "bytes": 25165824,
+            "store_fsync_ms": 27.229326
+          },
+          "aead_layer_block": {
+            "records": 192,
+            "bytes": 25171392,
+            "store_fsync_ms": 80.592833
+          }
+        },
+        "peak": {
+          "prefix_cold_forward_MiB": 1603.68359375,
+          "recompute_MiB": 1648.638671875,
+          "recovery_peak_MiB": 1039.72021484375
+        },
+        "sc3": true,
+        "variants": {
+          "recompute": {
+            "median": 72.339764,
+            "min": 70.341975,
+            "max": 73.924287,
+            "n": 5
+          },
+          "plain_layer": {
+            "median": 139.403219,
+            "min": 135.038209,
+            "max": 335.107188,
+            "n": 5
+          },
+          "aead_whole": {
+            "median": 198.348928,
+            "min": 192.993007,
+            "max": 247.300528,
+            "n": 5
+          },
+          "aead_layer": {
+            "median": 138.115466,
+            "min": 136.248324,
+            "max": 164.948191,
+            "n": 5
+          },
+          "aead_layer_block": {
+            "median": 159.655273,
+            "min": 158.514354,
+            "max": 170.340235,
+            "n": 5
+          }
+        }
+      },
+      {
+        "P": 8192,
+        "S": 69,
+        "kv_MiB": 96.0,
+        "store": {
+          "aead_whole": {
+            "records": 1,
+            "bytes": 100663325,
+            "store_fsync_ms": 372.332546
+          },
+          "aead_layer": {
+            "records": 24,
+            "bytes": 100663992,
+            "store_fsync_ms": 152.401731
+          },
+          "plain_layer": {
+            "records": 24,
+            "bytes": 100663296,
+            "store_fsync_ms": 122.882464
+          },
+          "aead_layer_block": {
+            "records": 768,
+            "bytes": 100685568,
+            "store_fsync_ms": 239.856617
+          }
+        },
+        "peak": {
+          "prefix_cold_forward_MiB": 3490.23046875,
+          "recompute_MiB": 3583.232421875,
+          "recovery_peak_MiB": 1207.36328125
+        },
+        "sc3": true,
+        "variants": {
+          "recompute": {
+            "median": 314.332822,
+            "min": 299.908263,
+            "max": 384.548533,
+            "n": 5
+          },
+          "plain_layer": {
+            "median": 327.61038,
+            "min": 320.220261,
+            "max": 364.727889,
+            "n": 5
+          },
+          "aead_whole": {
+            "median": 583.593293,
+            "min": 564.868204,
+            "max": 642.168822,
+            "n": 5
+          },
+          "aead_layer": {
+            "median": 338.177711,
+            "min": 326.077517,
+            "max": 350.534934,
+            "n": 5
+          },
+          "aead_layer_block": {
+            "median": 438.923088,
+            "min": 412.907668,
+            "max": 455.033161,
+            "n": 5
+          }
+        }
+      },
+      {
+        "P": 18001,
+        "S": 69,
+        "kv_MiB": 210.94921875,
+        "store": {
+          "aead_whole": {
+            "records": 1,
+            "bytes": 221196317,
+            "store_fsync_ms": 776.51245
+          },
+          "aead_layer": {
+            "records": 24,
+            "bytes": 221196984,
+            "store_fsync_ms": 352.743429
+          },
+          "plain_layer": {
+            "records": 24,
+            "bytes": 221196288,
+            "store_fsync_ms": 253.132368
+          },
+          "aead_layer_block": {
+            "records": 1704,
+            "bytes": 221245704,
+            "store_fsync_ms": 403.497009
+          }
+        },
+        "peak": {
+          "prefix_cold_forward_MiB": 6539.7236328125,
+          "recompute_MiB": 6676.751953125,
+          "recovery_peak_MiB": 1479.50146484375
+        },
+        "sc3": true,
+        "variants": {
+          "recompute": {
+            "median": 902.212281,
+            "min": 865.443133,
+            "max": 906.476643,
+            "n": 5
+          },
+          "plain_layer": {
+            "median": 688.431157,
+            "min": 609.212835,
+            "max": 742.184621,
+            "n": 5
+          },
+          "aead_whole": {
+            "median": 1282.536374,
+            "min": 1253.588321,
+            "max": 1518.967062,
+            "n": 5
+          },
+          "aead_layer": {
+            "median": 712.716552,
+            "min": 625.719387,
+            "max": 745.937127,
+            "n": 5
+          },
+          "aead_layer_block": {
+            "median": 931.357373,
+            "min": 913.033412,
+            "max": 946.981547,
+            "n": 5
+          }
+        }
+      },
+      {
+        "P": 32000,
+        "S": 69,
+        "kv_MiB": 375.0,
+        "store": {
+          "aead_whole": {
+            "records": 1,
+            "bytes": 393216029,
+            "store_fsync_ms": 1653.565278
+          },
+          "aead_layer": {
+            "records": 24,
+            "bytes": 393216696,
+            "store_fsync_ms": 571.588466
+          },
+          "plain_layer": {
+            "records": 24,
+            "bytes": 393216000,
+            "store_fsync_ms": 490.348997
+          },
+          "aead_layer_block": {
+            "records": 3000,
+            "bytes": 393303000,
+            "store_fsync_ms": 1102.419462
+          }
+        },
+        "peak": {
+          "prefix_cold_forward_MiB": 10687.349609375,
+          "recompute_MiB": 11084.943359375,
+          "recovery_peak_MiB": 1855.71923828125
+        },
+        "sc3": true,
+        "variants": {
+          "recompute": {
+            "median": 2099.907795,
+            "min": 2058.8736,
+            "max": 2107.463672,
+            "n": 5
+          },
+          "plain_layer": {
+            "median": 1213.390904,
+            "min": 1192.367498,
+            "max": 1305.514632,
+            "n": 5
+          },
+          "aead_whole": {
+            "median": 2211.699177,
+            "min": 2080.335209,
+            "max": 2489.679659,
+            "n": 5
+          },
+          "aead_layer": {
+            "median": 1226.768274,
+            "min": 1046.232231,
+            "max": 1432.118154,
+            "n": 5
+          },
+          "aead_layer_block": {
+            "median": 1586.604639,
+            "min": 1585.464258,
+            "max": 1661.090239,
+            "n": 5
+          }
+        }
+      }
+    ]
+  },
+  "cold": {
+    "regime": "cold_fadvise",
+    "points": [
+      {
+        "P": 2048,
+        "S": 69,
+        "kv_MiB": 24.0,
+        "store": {
+          "aead_whole": {
+            "records": 1,
+            "bytes": 25165853,
+            "store_fsync_ms": 148.209938
+          },
+          "aead_layer": {
+            "records": 24,
+            "bytes": 25166520,
+            "store_fsync_ms": 49.902045
+          },
+          "plain_layer": {
+            "records": 24,
+            "bytes": 25165824,
+            "store_fsync_ms": 48.14638
+          },
+          "aead_layer_block": {
+            "records": 192,
+            "bytes": 25171392,
+            "store_fsync_ms": 66.434589
+          }
+        },
+        "peak": {
+          "prefix_cold_forward_MiB": 1603.68359375,
+          "recompute_MiB": 1648.638671875,
+          "recovery_peak_MiB": 1039.72021484375
+        },
+        "sc3": true,
+        "variants": {
+          "recompute": {
+            "median": 89.583107,
+            "min": 71.925419,
+            "max": 92.904021,
+            "n": 5
+          },
+          "plain_layer": {
+            "median": 147.088638,
+            "min": 138.634972,
+            "max": 271.426839,
+            "n": 5
+          },
+          "aead_whole": {
+            "median": 211.678294,
+            "min": 210.885625,
+            "max": 254.532351,
+            "n": 5
+          },
+          "aead_layer": {
+            "median": 154.605667,
+            "min": 143.741919,
+            "max": 170.393907,
+            "n": 5
+          },
+          "aead_layer_block": {
+            "median": 173.987262,
+            "min": 163.287664,
+            "max": 190.323367,
+            "n": 5
+          }
+        }
+      },
+      {
+        "P": 8192,
+        "S": 69,
+        "kv_MiB": 96.0,
+        "store": {
+          "aead_whole": {
+            "records": 1,
+            "bytes": 100663325,
+            "store_fsync_ms": 326.436898
+          },
+          "aead_layer": {
+            "records": 24,
+            "bytes": 100663992,
+            "store_fsync_ms": 98.544281
+          },
+          "plain_layer": {
+            "records": 24,
+            "bytes": 100663296,
+            "store_fsync_ms": 81.735044
+          },
+          "aead_layer_block": {
+            "records": 768,
+            "bytes": 100685568,
+            "store_fsync_ms": 193.482167
+          }
+        },
+        "peak": {
+          "prefix_cold_forward_MiB": 3490.23046875,
+          "recompute_MiB": 3583.232421875,
+          "recovery_peak_MiB": 1207.36328125
+        },
+        "sc3": true,
+        "variants": {
+          "recompute": {
+            "median": 330.056954,
+            "min": 316.365366,
+            "max": 392.895413,
+            "n": 5
+          },
+          "plain_layer": {
+            "median": 367.112112,
+            "min": 343.507967,
+            "max": 384.651265,
+            "n": 5
+          },
+          "aead_whole": {
+            "median": 594.608694,
+            "min": 581.928368,
+            "max": 699.731354,
+            "n": 5
+          },
+          "aead_layer": {
+            "median": 374.007033,
+            "min": 370.626649,
+            "max": 390.766445,
+            "n": 5
+          },
+          "aead_layer_block": {
+            "median": 478.310506,
+            "min": 472.268265,
+            "max": 503.4225,
+            "n": 5
+          }
+        }
+      },
+      {
+        "P": 32000,
+        "S": 69,
+        "kv_MiB": 375.0,
+        "store": {
+          "aead_whole": {
+            "records": 1,
+            "bytes": 393216029,
+            "store_fsync_ms": 1497.000743
+          },
+          "aead_layer": {
+            "records": 24,
+            "bytes": 393216696,
+            "store_fsync_ms": 424.321699
+          },
+          "plain_layer": {
+            "records": 24,
+            "bytes": 393216000,
+            "store_fsync_ms": 292.552751
+          },
+          "aead_layer_block": {
+            "records": 3000,
+            "bytes": 393303000,
+            "store_fsync_ms": 691.513759
+          }
+        },
+        "peak": {
+          "prefix_cold_forward_MiB": 10783.974609375,
+          "recompute_MiB": 11084.9326171875,
+          "recovery_peak_MiB": 1856.5400390625
+        },
+        "sc3": true,
+        "variants": {
+          "recompute": {
+            "median": 2123.397845,
+            "min": 2054.423132,
+            "max": 2195.87029,
+            "n": 5
+          },
+          "plain_layer": {
+            "median": 1130.804786,
+            "min": 1057.041954,
+            "max": 1209.237891,
+            "n": 5
+          },
+          "aead_whole": {
+            "median": 2251.870525,
+            "min": 2108.406042,
+            "max": 2620.167487,
+            "n": 5
+          },
+          "aead_layer": {
+            "median": 1181.686198,
+            "min": 1102.839398,
+            "max": 1223.026888,
+            "n": 5
+          },
+          "aead_layer_block": {
+            "median": 1811.163154,
+            "min": 1608.446171,
+            "max": 1830.593697,
+            "n": 5
+          }
+        }
+      }
+    ]
+  }
+}

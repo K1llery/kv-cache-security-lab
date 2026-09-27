@@ -1,0 +1,34 @@
+prompts 1024 tok; shared 768; tails equal: True
+warmup ok (W0=4 files)
+store_B ok: +4 objects
+O_B_true=' Tokyo is known for its skyscrapers and bustling streets. The archives'
+O_B_hit =' Tokyo is known for its skyscrapers and bustling streets. The archives' ==true:True
+fC3 identified: -SEP-home-SEP-mr-SEP-projects-SEP-科研训练2.0-SEP-expe..
+O_C_true=' Paris was bustling with activity, and the delegates were eager to sig'
+O_C_hit =' Paris was bustling with activity, and the delegates were eager to sig' ==true:True
+  swap->-SEP-home-SEP-mr-SEP-projects-..: hit=[(0, 4)] out=' Paris was bustling with activity, and the delegates wer'
+  swap->-SEP-home-SEP-mr-SEP-projects-..: hit=[(0, 4)] out=' Paris was bustling with activity, and the delegates wer'
+  swap->-SEP-home-SEP-mr-SEP-projects-..: hit=[(0, 4)] out=' Paris, the capital of France, The city of Paris, the ca'
+  swap->-SEP-home-SEP-mr-SEP-projects-..: hit=[(0, 4)] out=' Paris was bustling with activity, and the delegates wer'
+PRIMARY: aligned trials=2/1; misaligned silent-corruption trials=2/3
+disk files changed after swap trials: 0 (引擎 kv_both 读回后重写属正常，记录 IV 变化): []
+  recheck#0: out==O_B_true:True out=' Tokyo is known for its skyscrapers and bustling s'
+  recheck#1: out==O_B_true:True out=' Tokyo is known for its skyscrapers and bustling s'
+REVERSIBLE: True
+  bitflip#0: reject_logs=3 out==true:True out=' Tokyo is known for its skyscrapers and bustli'
+  bitflip#1: reject_logs=6 out==true:True out=' Tokyo is known for its skyscrapers and bustli'
+  bitflip#2: reject_logs=9 out==true:True out=' Tokyo is known for its skyscrapers and bustli'
+  truncate#0: reject_logs=7 out==true:True out=' Tokyo is known for its skyscrapers and bustli'
+  truncate#1: reject_logs=5 out==true:True out=' Tokyo is known for its skyscrapers and bustli'
+  truncate#2: reject_logs=3 out==true:True out=' Tokyo is known for its skyscrapers and bustli'
+{
+ "n_aligned_trials": 2,
+ "n_misaligned_trials": 2,
+ "swap_all_deterministic": true,
+ "primary_silent_misuse": true,
+ "reversible_recheck": true,
+ "files_rewritten_after_load": 0,
+ "bitflip_all_rejected": true,
+ "truncate_all_rejected": true
+}
+EXP010_OK

@@ -1,0 +1,37 @@
+prompts 1024 tok; shared 768; tails equal: True
+[32;20m[2026-09-27 16:42:49,677] LMCache INFO:[0m torch_dev=<module 'torch.cuda' from '/home/mr/projects/科研训练2.0/experiments/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py'>, torch_device_type=cuda [3m(_device_detect.py:311:lmcache.v1.platform._device_detect)[0m
+[32;20m[2026-09-27 16:42:49,678] LMCache INFO:[0m Auto-selected backend [cuda] for accelerator 'cuda' from candidate backends [cuda, rocm]. [3m(__init__.py:149:lmcache.v1.platform)[0m
+A4 old-frame (AAD=None) under new serde: InvalidTag (期望 InvalidTag)
+warmup ok (W0=4 files)
+store_B ok: +4 objects
+O_B_true=' Tokyo is known for its skyscrapers and bustling streets. The archives'
+O_B_hit =' Tokyo is known for its skyscrapers and bustling streets. The archives' ==true:True hit=[(0, 4)]
+fC3 identified: -SEP-home-SEP-mr-SEP-projects-SEP-科研训练2.0-SEP-expe..
+O_C_true=' Paris was bustling with activity, and the delegates were eager to sig'
+O_C_hit =' Paris was bustling with activity, and the delegates were eager to sig' ==true:True
+  swap->-SEP-home-SEP-mr-SEP-projects-SEP-..: out=' Tokyo is known for its skyscrapers and bustling str' rej_lines=3
+  -> verdict: rejected_to_baseline=True no_leak=True
+  swap->-SEP-home-SEP-mr-SEP-projects-SEP-..: out=' Tokyo is known for its skyscrapers and bustling str' rej_lines=9
+  -> verdict: rejected_to_baseline=True no_leak=True
+  swap->-SEP-home-SEP-mr-SEP-projects-SEP-..: out=' Tokyo is known for its skyscrapers and bustling str' rej_lines=9
+  -> verdict: rejected_to_baseline=True no_leak=True
+  swap->-SEP-home-SEP-mr-SEP-projects-SEP-..: out=' Tokyo is known for its skyscrapers and bustling str' rej_lines=9
+  -> verdict: rejected_to_baseline=True no_leak=True
+ACCEPTANCE A2: 4/4 swap trials rejected to baseline
+disk files changed after trials: 0 []
+  recheck#0: out==O_B_true:True
+  recheck#1: out==O_B_true:True
+  bitflip#0: reject_logs=3 out==true:True
+  bitflip#1: reject_logs=6 out==true:True
+  truncate#0: reject_logs=7 out==true:True
+  truncate#1: reject_logs=8 out==true:True
+{
+ "A1_honest_hit_intact": true,
+ "A2_all_swap_trials_rejected_to_baseline": true,
+ "A2_no_output_leak_from_C": true,
+ "A3_bitflip_safe": true,
+ "A3_truncate_safe": true,
+ "A4_old_frame_invalidated": true,
+ "honest_hit_assertion_4of4": true
+}
+EXP011_OK

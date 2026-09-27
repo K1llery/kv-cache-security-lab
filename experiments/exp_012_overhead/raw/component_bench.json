@@ -1,0 +1,33 @@
+{
+  "aad_encode_us": 0.739,
+  "gcm": {
+    "12KB": {
+      "encrypt_us_no_aad": 1.08,
+      "encrypt_us_with_aad": 1.18,
+      "decrypt_us_no_aad": 1.08,
+      "decrypt_us_with_aad": 1.17,
+      "enc_overhead_pct": 9.03,
+      "dec_overhead_pct": 8.02
+    },
+    "48KB": {
+      "encrypt_us_no_aad": 2.56,
+      "encrypt_us_with_aad": 2.68,
+      "decrypt_us_no_aad": 2.57,
+      "decrypt_us_with_aad": 2.7,
+      "enc_overhead_pct": 4.64,
+      "dec_overhead_pct": 5.09
+    },
+    "96KB": {
+      "encrypt_us_no_aad": 4.49,
+      "encrypt_us_with_aad": 4.57,
+      "decrypt_us_no_aad": 4.51,
+      "decrypt_us_with_aad": 4.65,
+      "enc_overhead_pct": 1.67,
+      "dec_overhead_pct": 2.9
+    }
+  },
+  "component_thresholds": {
+    "aad_encode_under_10us": true,
+    "gcm_overhead_under_5pct": false
+  }
+}

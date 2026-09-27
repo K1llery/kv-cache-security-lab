@@ -1,0 +1,23 @@
+ctx_limit=32768 regime=warm_pagecache reps=5
+[P=2048] cold prefill 1501ms, KV=24MiB (12288 B/token), peak 1604MiB
+[P=2048] recompute median 72ms
+[P=2048] plain_layer        median     139ms min     135 max     335 SC2=n/a
+[P=2048] aead_whole         median     198ms min     193 max     247 SC2=True
+[P=2048] aead_layer         median     138ms min     136 max     165 SC2=True
+[P=2048] aead_layer_block   median     160ms min     159 max     170 SC2=True
+[P=2048] SC3 tamper rejected: True (record 3: InvalidTag)
+[P=8192] cold prefill 305ms, KV=96MiB (12288 B/token), peak 3490MiB
+[P=8192] recompute median 314ms
+[P=8192] plain_layer        median     328ms min     320 max     365 SC2=n/a
+[P=8192] aead_whole         median     584ms min     565 max     642 SC2=True
+[P=8192] aead_layer         median     338ms min     326 max     351 SC2=True
+[P=8192] aead_layer_block   median     439ms min     413 max     455 SC2=True
+[P=8192] SC3 tamper rejected: True (record 3: InvalidTag)
+[P=18001] cold prefill 817ms, KV=210MiB (12288 B/token), peak 6540MiB
+[P=18001] recompute median 902ms
+[P=18001] plain_layer        median     688ms min     609 max     742 SC2=n/a
+[P=18001] aead_whole         median    1283ms min    1254 max    1519 SC2=True
+[P=18001] aead_layer         median     713ms min     626 max     746 SC2=True
+[P=18001] aead_layer_block   median     931ms min     913 max     947 SC2=True
+[P=18001] SC3 tamper rejected: True (record 3: InvalidTag)
+EXP005_OK -> /home/mr/projects/科研训练2.0/experiments/exp_005_psweep/raw/psweep_results.json

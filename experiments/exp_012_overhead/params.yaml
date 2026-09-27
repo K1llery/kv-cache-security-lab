@@ -1,0 +1,20 @@
+# exp_012 参数（来源标注）
+model: /home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct  # source: exp003_verified
+serdes: [aesgcm, aesgcm_aad]     # source: review_20260927_v3 第 4 项（主对照仅此二者）
+points_token_exact: [1024, 5000, 8192]  # source: review_20260927_v3（1K/5K/8K）
+expected_chunks: {1024: 4, 5000: 19, 8192: 32}  # source: upstream_code（整 256-token 块）
+block_order: {1024: [aesgcm, aesgcm_aad], 5000: [aesgcm_aad, aesgcm], 8192: [aesgcm, aesgcm_aad]}  # source: review_20260927_v3（平衡顺序）
+reps_l2hit: 10                   # source: review_20260927_v3（每条件 ≥10）
+reps_recompute: 3                # 每块内重算基线（全新 salt，逐请求断言 0 命中）
+warmup_per_block: 2              # source: review_20260927_v3（区分预热与正式测量）
+max_tokens_ttft: 8
+throughput: {point: 5000, concurrency: 4, waves: 3, max_tokens: 64}  # source: review_20260927_v3（固定并发与输出长度，与 TTFT 分开）
+l1_size_gb: 2
+gpu_mem_util: 0.35
+transfer_mode: engine_driven
+thresholds:                      # source: 预注册（见 claim.md，实验前写定）
+  component_aad_encode_us: 10
+  component_gcm_aad_overhead_pct: 5
+  e2e_negligible_pct: 5
+  e2e_negligible_abs_ms: 1
+  undecidable_ci_width_pct: 10

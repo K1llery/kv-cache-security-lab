@@ -1,0 +1,48 @@
+=== date ===
+Sun Sep 27 02:35:01 UTC 2026
+=== uname ===
+Linux Mechrevo-Jiaolong16pro 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+=== python ===
+Python 3.12.3
+=== nvidia-smi ===
+Sun Sep 27 10:35:02 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 615.78.02              KMD Version: 617.14        CUDA UMD Version: 13.4     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 5070 ...    On  |   00000000:01:00.0  On |                  N/A |
+| N/A   49C    P0             27W /  140W |    1369MiB /  12227MiB |      7%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+=== torch ===
+2.13.0+cu130 13.0 NVIDIA GeForce RTX 5070 Ti Laptop GPU sm_120
+=== lmcache ===
+9a7b60501bc8ac3d0ab33b11dfd962ccfd02a5ae 2026-09-26T02:12:46+00:00 [Feat][MP]: Preemption Handling (#5248)
+[32;20m[2026-09-27 10:35:05,003] LMCache INFO:[0m torch_dev=<module 'torch.cuda' from '/home/mr/projects/科研训练2.0/experiments/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py'>, torch_device_type=cuda [3m(_device_detect.py:311:lmcache.v1.platform._device_detect)[0m
+[32;20m[2026-09-27 10:35:05,004] LMCache INFO:[0m Auto-selected backend [cuda] for accelerator 'cuda' from candidate backends [cuda, rocm]. [3m(__init__.py:149:lmcache.v1.platform)[0m
+lmcache import OK: /home/mr/projects/科研训练2.0/experiments/upstream/LMCache/lmcache/__init__.py
+=== lmcache version ===
+Name: lmcache
+Version: 0.1.dev1
+Summary: A LLM serving engine extension to reduce TTFT and increase throughput, especially under long-context scenarios.
+=== vllm ===
+3b4566c5cf014605de6aeab6eb831b4f20511c17 2026-09-26T14:03:45+08:00 [CI] Only isolate the registry tests that need a fresh process (#58764)
+vllm import OK: 0.30.1rc1.dev194+g3b4566c5c
+=== cryptography/OpenSSL ===
+50.0.1 OpenSSL 4.0.2 25 Aug 2026
+=== AES-NI ===
+grep: Invalid regular expression
+=== disk of L2 target ===
+/dev/sdd       1007G   65G  891G   7% /
+ext2/ext3

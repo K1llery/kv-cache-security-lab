@@ -1,0 +1,17 @@
+# exp_001: a3 组件原型复跑参数
+# 每项参数必须标 source（08 纪律 §3/§5）：
+#   a3_report        = a3_选题核验与调研_20260926.md 中的原始设置
+#   upstream_code    = LMCache@9a7b605 源码默认值
+#   sanity           = 08 纪律要求的 sanity check 专用参数
+#   hypothetical_sweep = 假设扫描（本次无）
+
+master_key: "exp001-local-test-master-key-32b!!"   # source: sanity（本地测试密钥，非生产材料）
+hkdf_info_prefix: "exp001-aesgcm-verify"           # source: sanity（域分离前缀，格式照抄上游 b"..."）
+aes_bits: 128                                      # source: upstream_code（aesgcm.py 默认 _SUPPORTED_AES_BITS=(128,256)，默认 128）
+batch_sizes:                                       # source: a3_report（主实验配置）
+  - {n_objects: 16, obj_bytes: 1048576}            # 16 × 1 MiB
+  - {n_objects: 16, obj_bytes: 4194304}            # 16 × 4 MiB
+reps: 7                                            # source: a3_report（7 次重复取中位数）
+max_workers: 1                                     # source: upstream_code（aesgcm.py _create_aesgcm_serde 默认 max_workers=1）
+poll_interval_ms: 0.2                              # source: a3_report（主线程轮询 query_deserialize_result 间隔）
+wrong_salt: "exp001-wrong-tenant"                  # source: a3_report（异 salt 拒绝测试）

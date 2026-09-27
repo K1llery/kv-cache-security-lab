@@ -1,0 +1,30 @@
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  44%|████▍     | 128/290 [00:00<00:00, 1277.85it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 1486.16it/s]
+[P=8192] plain_layer        median     340ms min     325 max     429 SC2=n/a
+[P=8192] aead_layer         median     351ms min     321 max     377 SC2=True
+[P=8192] aead_layer_batch   median     362ms min     346 max     444 SC2=True
+[P=8192] aead_layer_block   median     478ms min     469 max     517 SC2=True
+[P=8192] aead_whole         median     660ms min     653 max     690 SC2=True
+[P=8192] recompute          median     325ms
+[P=8192] SC3 rejected: True (record 3: InvalidTag)
+[P=12288] plain_layer        median     482ms min     456 max     543 SC2=n/a
+[P=12288] aead_layer         median     476ms min     467 max     504 SC2=True
+[P=12288] aead_layer_batch   median     491ms min     483 max     504 SC2=True
+[P=12288] aead_layer_block   median     660ms min     647 max     690 SC2=True
+[P=12288] aead_whole         median     890ms min     863 max     966 SC2=True
+[P=12288] recompute          median     537ms
+[P=12288] SC3 rejected: True (record 3: InvalidTag)
+[P=16384] plain_layer        median     625ms min     609 max     665 SC2=n/a
+[P=16384] aead_layer         median     613ms min     603 max     653 SC2=True
+[P=16384] aead_layer_batch   median     621ms min     603 max     638 SC2=True
+[P=16384] aead_layer_block   median     840ms min     815 max     847 SC2=True
+[P=16384] aead_whole         median    1138ms min    1113 max    1210 SC2=True
+[P=16384] recompute          median     801ms
+[P=16384] SC3 rejected: True (record 3: InvalidTag)
+[P=20480] plain_layer        median     697ms min     676 max     771 SC2=n/a
+[P=20480] aead_layer         median     706ms min     691 max     789 SC2=True
+[P=20480] aead_layer_batch   median     720ms min     701 max     776 SC2=True
+[P=20480] aead_layer_block   median    1003ms min     984 max    1064 SC2=True
+[P=20480] aead_whole         median    1466ms min    1388 max    1557 SC2=True
+[P=20480] recompute          median    1051ms
+[P=20480] SC3 rejected: True (record 3: InvalidTag)
+EXP009_BOUNDARY_OK -> boundary_results.json

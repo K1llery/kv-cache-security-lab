@@ -1,0 +1,28 @@
+# exp_009: 修正版原型扫描（评审意见 2026-09-27 第 3 项）
+# 相对 exp_005 的修正：
+#   1. 修复嵌套重复：run_variant 内层不再循环全部 reps；每个变体每轮恰好执行一次，
+#      并记录真实执行顺序（raw/*.json 的 execution_order）。
+#   2. 边界细化：P ∈ {8192, 12288, 16384, 20480}（exp_005 只把交叉点夹在 8K–18K）。
+#   3. 术语修正：W 扫描只称"窗口扫描"；强基线的"批量 I/O"以 aead_layer_batch 变体
+#      实现（顺序 16MB 缓冲读替代逐记录 pread；认证仍逐记录），在其测出之前
+#      不称"完整强基线已解决"。
+# 参数来源：
+#   review_20260927_v2 = 评审意见（本次工作单第 3 项）
+#   inherited          = exp_004/005 装置（AES-GCM 帧/AAD=None/逐层 verified-before-use/SC1-SC4）
+
+model_path: /home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct
+boundary_points: [8192, 12288, 16384, 20480]   # source: review_20260927_v2（8K 与 18K 之间细化）
+window_sweep_point: 8192
+window_list: [1, 2, 4, 8]                      # source: review_20260927_v2（只称窗口扫描）
+suffix_tokens: 69
+block_tokens: 256
+aes_bits: 128
+hkdf_info_prefix: "exp004-aesgcm-verify"
+cache_salt: "tenant-a"
+reps: 7                       # source: review_20260927_v2（每变体每轮一次，n=7）
+variant_rotation: true        # 修复后的真实轮转
+variants_boundary: [recompute, plain_layer, aead_layer, aead_layer_batch, aead_layer_block, aead_whole]
+variants_window: [aead_layer, aead_layer_batch]
+batch_io: {enabled: true, buffer_bytes: 16777216}   # aead_layer_batch：顺序 16MB 缓冲读
+record_execution_order: true
+metrics: [ttft_proxy_ms, crossover_bracket, batch_vs_per_record_read, execution_order, sc2_identity, sc3_tamper]

@@ -1,3 +1,23 @@
-experiments/
-*.log
+# ===== 大对象与第三方代码（不入库）=====
+.venv/
+models/
+upstream/
 __pycache__/
+*.pyc
+*.blob
+*.data
+*.bin
+master.key
+
+# ===== 本地归档的旧 git 历史（含 12 个实验密钥与 10GB 大文件；禁止推送）=====
+experiments/.git-local-archive/
+
+# ===== 运行时目录（引擎日志 / L2 盘对象 / 密钥）=====
+experiments/exp_*/runtime/
+
+# ===== 导师原始研究包（不属于本仓库发布范围）=====
+柴硕_密文迁移研究包_20260923/
+
+# ===== zcode 本地配置 =====
+.zcode/
+.zcodeignore

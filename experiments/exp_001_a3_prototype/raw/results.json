@@ -1,0 +1,265 @@
+{
+  "env": {
+    "python_os_pid": 3655
+  },
+  "checks": {
+    "frame_format": {
+      "version_byte": 1,
+      "iv": "e94aeb33b7ae28e957691d26",
+      "len": 16413,
+      "overhead_expected": 29,
+      "overhead_actual": 29
+    },
+    "B1_roundtrip": true,
+    "B2_tamper": {
+      "exception": "InvalidTag",
+      "dst_untouched": true
+    },
+    "B3_wrong_salt": "InvalidTag",
+    "B4_substitution": {
+      "exception": null,
+      "plaintext_recovered_is_B": true,
+      "interpretation": "同 salt 同长度替换被接受：AAD=None，对象身份未绑定（a3 事实④）"
+    },
+    "S2_bad_version": "ValueError",
+    "S3_short_frame": "ValueError"
+  },
+  "timing": [
+    {
+      "config": "16 x 1 MiB, max_workers=1",
+      "pass": "pass1",
+      "median_first_obj_auth_ms": 1.7272129999999999,
+      "median_batch_notify_ms": 4.615537000000001,
+      "first_pending_in_all_reps": true,
+      "all_roundtrips_ok": true,
+      "raw": [
+        {
+          "rep": 0,
+          "first_obj_auth_us_after_submit": 1727.213,
+          "batch_notify_us_after_submit": 4615.537,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 1,
+          "first_obj_auth_us_after_submit": 1296.789,
+          "batch_notify_us_after_submit": 4274.76,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 2,
+          "first_obj_auth_us_after_submit": 1617.98,
+          "batch_notify_us_after_submit": 4976.861,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 3,
+          "first_obj_auth_us_after_submit": 1450.419,
+          "batch_notify_us_after_submit": 5591.612,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 4,
+          "first_obj_auth_us_after_submit": 2072.018,
+          "batch_notify_us_after_submit": 4930.662,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 5,
+          "first_obj_auth_us_after_submit": 1729.281,
+          "batch_notify_us_after_submit": 4521.929,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 6,
+          "first_obj_auth_us_after_submit": 1847.691,
+          "batch_notify_us_after_submit": 4573.457,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        }
+      ]
+    },
+    {
+      "config": "16 x 1 MiB, max_workers=1",
+      "pass": "pass2_repeat",
+      "median_first_obj_auth_ms": 1.479622,
+      "median_batch_notify_ms": 4.625229999999999,
+      "first_pending_in_all_reps": true,
+      "all_roundtrips_ok": true,
+      "raw": [
+        {
+          "rep": 0,
+          "first_obj_auth_us_after_submit": 1609.688,
+          "batch_notify_us_after_submit": 4463.193,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 1,
+          "first_obj_auth_us_after_submit": 2943.516,
+          "batch_notify_us_after_submit": 6552.361,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 2,
+          "first_obj_auth_us_after_submit": 1479.622,
+          "batch_notify_us_after_submit": 4113.484,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 3,
+          "first_obj_auth_us_after_submit": 1389.925,
+          "batch_notify_us_after_submit": 4796.069,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 4,
+          "first_obj_auth_us_after_submit": 1312.228,
+          "batch_notify_us_after_submit": 4625.23,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 5,
+          "first_obj_auth_us_after_submit": 1670.871,
+          "batch_notify_us_after_submit": 5493.135,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 6,
+          "first_obj_auth_us_after_submit": 1462.896,
+          "batch_notify_us_after_submit": 4406.553,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        }
+      ]
+    },
+    {
+      "config": "16 x 4 MiB, max_workers=1",
+      "pass": "pass1",
+      "median_first_obj_auth_ms": 4.601546999999999,
+      "median_batch_notify_ms": 15.284355999999999,
+      "first_pending_in_all_reps": true,
+      "all_roundtrips_ok": true,
+      "raw": [
+        {
+          "rep": 0,
+          "first_obj_auth_us_after_submit": 6050.914,
+          "batch_notify_us_after_submit": 17516.588,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 1,
+          "first_obj_auth_us_after_submit": 4601.547,
+          "batch_notify_us_after_submit": 15284.356,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 2,
+          "first_obj_auth_us_after_submit": 7657.27,
+          "batch_notify_us_after_submit": 18591.454,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 3,
+          "first_obj_auth_us_after_submit": 4089.887,
+          "batch_notify_us_after_submit": 14537.597,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 4,
+          "first_obj_auth_us_after_submit": 5265.943,
+          "batch_notify_us_after_submit": 19485.946,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 5,
+          "first_obj_auth_us_after_submit": 4093.285,
+          "batch_notify_us_after_submit": 15237.631,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 6,
+          "first_obj_auth_us_after_submit": 4505.274,
+          "batch_notify_us_after_submit": 15001.701,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        }
+      ]
+    },
+    {
+      "config": "16 x 4 MiB, max_workers=1",
+      "pass": "pass2_repeat",
+      "median_first_obj_auth_ms": 4.412658,
+      "median_batch_notify_ms": 15.609566999999998,
+      "first_pending_in_all_reps": true,
+      "all_roundtrips_ok": true,
+      "raw": [
+        {
+          "rep": 0,
+          "first_obj_auth_us_after_submit": 4585.527,
+          "batch_notify_us_after_submit": 15719.639,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 1,
+          "first_obj_auth_us_after_submit": 4208.628,
+          "batch_notify_us_after_submit": 14858.591,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 2,
+          "first_obj_auth_us_after_submit": 6162.937,
+          "batch_notify_us_after_submit": 17592.652,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 3,
+          "first_obj_auth_us_after_submit": 4412.658,
+          "batch_notify_us_after_submit": 15609.567,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 4,
+          "first_obj_auth_us_after_submit": 4350.894,
+          "batch_notify_us_after_submit": 15221.295,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 5,
+          "first_obj_auth_us_after_submit": 4225.463,
+          "batch_notify_us_after_submit": 16302.755,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        },
+        {
+          "rep": 6,
+          "first_obj_auth_us_after_submit": 4473.429,
+          "batch_notify_us_after_submit": 15543.209,
+          "first_obj_auth_while_batch_pending": true,
+          "all_dst_correct": true
+        }
+      ]
+    }
+  ]
+}

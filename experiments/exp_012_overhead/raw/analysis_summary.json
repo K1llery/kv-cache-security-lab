@@ -1,0 +1,239 @@
+{
+  "ttft": {
+    "P1024": {
+      "aesgcm": {
+        "median": 178.55,
+        "min": 172.6,
+        "max": 223.0,
+        "n": 10,
+        "values": [
+          172.6,
+          172.7,
+          172.9,
+          174.3,
+          177.1,
+          180.0,
+          183.2,
+          185.6,
+          186.1,
+          223.0
+        ]
+      },
+      "aesgcm_aad": {
+        "median": 195.15,
+        "min": 173.0,
+        "max": 258.6,
+        "n": 10,
+        "values": [
+          173.0,
+          186.2,
+          186.2,
+          194.1,
+          194.3,
+          196.0,
+          196.2,
+          202.7,
+          208.5,
+          258.6
+        ]
+      },
+      "diff": {
+        "median_diff_ms": 16.6,
+        "ci95": [
+          5.8,
+          26.5
+        ],
+        "ci_width_pct": 10.7,
+        "verdict": "\u5c1a\u4e0d\u80fd\u5224\u5b9a"
+      }
+    },
+    "P5000": {
+      "aesgcm": {
+        "median": 670.4,
+        "min": 629.7,
+        "max": 830.6,
+        "n": 10,
+        "values": [
+          629.7,
+          632.9,
+          636.6,
+          648.5,
+          667.0,
+          673.8,
+          685.4,
+          756.6,
+          783.3,
+          830.6
+        ]
+      },
+      "aesgcm_aad": {
+        "median": 716.3499999999999,
+        "min": 636.5,
+        "max": 876.9,
+        "n": 10,
+        "values": [
+          636.5,
+          655.6,
+          656.7,
+          676.9,
+          711.9,
+          720.8,
+          723.7,
+          728.7,
+          729.5,
+          876.9
+        ]
+      },
+      "diff": {
+        "median_diff_ms": 45.9,
+        "ci95": [
+          -58.1,
+          83.4
+        ],
+        "ci_width_pct": 19.8,
+        "verdict": "\u5c1a\u4e0d\u80fd\u5224\u5b9a"
+      }
+    },
+    "P8192": {
+      "aesgcm": {
+        "median": 1086.9,
+        "min": 1038.5,
+        "max": 2427.3,
+        "n": 10,
+        "values": [
+          1038.5,
+          1058.6,
+          1066.6,
+          1075.6,
+          1081.7,
+          1092.1,
+          1128.3,
+          1297.3,
+          1351.1,
+          2427.3
+        ]
+      },
+      "aesgcm_aad": {
+        "median": 1081.7,
+        "min": 1037.5,
+        "max": 1639.2,
+        "n": 10,
+        "values": [
+          1037.5,
+          1042.9,
+          1048.1,
+          1063.9,
+          1075.0,
+          1088.4,
+          1089.8,
+          1145.5,
+          1214.3,
+          1639.2
+        ]
+      },
+      "diff": {
+        "median_diff_ms": -5.2,
+        "ci95": [
+          -227.8,
+          69.6
+        ],
+        "ci_width_pct": 27.4,
+        "verdict": "\u53ef\u5ffd\u7565"
+      }
+    }
+  },
+  "throughput": {
+    "aesgcm": {
+      "wave_wall_ms": [
+        [
+          3507.0,
+          3507.0,
+          3507.0,
+          3507.0,
+          3369.6,
+          3369.6,
+          3369.6,
+          3369.6,
+          3280.2,
+          3280.2,
+          3280.2,
+          3280.2
+        ]
+      ],
+      "median_wave_wall": 3369.6,
+      "ttft_under_concurrency_median": 2676.35,
+      "all_lookups_present": true
+    },
+    "aesgcm_aad": {
+      "wave_wall_ms": [
+        [
+          3688.7,
+          3688.7,
+          3688.7,
+          3688.7,
+          3333.5,
+          3333.5,
+          3333.5,
+          3333.5,
+          3403.6,
+          3403.6,
+          3403.6,
+          3403.6
+        ]
+      ],
+      "median_wave_wall": 3403.6,
+      "ttft_under_concurrency_median": 2763.2,
+      "all_lookups_present": true
+    }
+  },
+  "store": [
+    {
+      "block": "aesgcm_P1024",
+      "point": 1024,
+      "serde": "aesgcm",
+      "store_completion_s": 1.28,
+      "expected_chunks": 4,
+      "stored_summary_line_seen": true
+    },
+    {
+      "block": "aesgcm_aad_P1024",
+      "point": 1024,
+      "serde": "aesgcm_aad",
+      "store_completion_s": 1.02,
+      "expected_chunks": 4,
+      "stored_summary_line_seen": true
+    },
+    {
+      "block": "aesgcm_aad_P5000",
+      "point": 5000,
+      "serde": "aesgcm_aad",
+      "store_completion_s": -0.78,
+      "expected_chunks": 19,
+      "stored_summary_line_seen": true
+    },
+    {
+      "block": "aesgcm_P5000",
+      "point": 5000,
+      "serde": "aesgcm",
+      "store_completion_s": 1.77,
+      "expected_chunks": 19,
+      "stored_summary_line_seen": true
+    },
+    {
+      "block": "aesgcm_P8192",
+      "point": 8192,
+      "serde": "aesgcm",
+      "store_completion_s": 1.9,
+      "expected_chunks": 32,
+      "stored_summary_line_seen": true
+    },
+    {
+      "block": "aesgcm_aad_P8192",
+      "point": 8192,
+      "serde": "aesgcm_aad",
+      "store_completion_s": 1.88,
+      "expected_chunks": 32,
+      "stored_summary_line_seen": true
+    }
+  ]
+}

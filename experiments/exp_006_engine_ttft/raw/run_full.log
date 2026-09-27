@@ -1,0 +1,26 @@
+stack ready; measuring...
+  store_cold     P~8 ttft=   555.2ms total=   643.2ms chunks=8
+  l1_warm        P~8 ttft=   221.6ms total=   281.3ms chunks=8
+  l1_warm        P~8 ttft=   138.0ms total=   192.2ms chunks=8
+  l2hit_warm     P~8 ttft=   145.8ms total=   201.3ms chunks=8
+  l2hit_warm     P~8 ttft=   145.4ms total=   199.0ms chunks=8
+  l2hit_warm     P~8 ttft=   152.2ms total=   209.4ms chunks=8
+  l2hit_cold     P~8 ttft=   142.4ms total=   200.4ms chunks=8
+  l2hit_cold     P~8 ttft=   184.7ms total=   239.4ms chunks=8
+  l2hit_cold     P~8 ttft=   165.3ms total=   223.2ms chunks=8
+  recompute      P~8 ttft=   155.6ms total=   214.7ms chunks=8
+  recompute      P~8 ttft=   148.0ms total=   202.4ms chunks=8
+  recompute      P~8 ttft=   131.7ms total=   189.9ms chunks=8
+  store_cold     P~32 ttft=   336.5ms total=   423.3ms chunks=8
+  l1_warm        P~32 ttft=   793.3ms total=   855.0ms chunks=8
+  l1_warm        P~32 ttft=   650.3ms total=   717.0ms chunks=8
+  l2hit_warm     P~32 ttft=   633.6ms total=   698.4ms chunks=8
+  l2hit_warm     P~32 ttft=   755.6ms total=   815.9ms chunks=8
+  l2hit_warm     P~32 ttft=   685.9ms total=   749.1ms chunks=8
+  l2hit_cold     P~32 ttft=   711.5ms total=   763.6ms chunks=8
+  l2hit_cold     P~32 ttft=   780.6ms total=   838.3ms chunks=8
+  l2hit_cold     P~32 ttft=   723.9ms total=   776.8ms chunks=8
+  recompute      P~32 ttft=   715.2ms total=   768.7ms chunks=8
+  recompute      P~32 ttft=   616.2ms total=   673.6ms chunks=8
+  recompute      P~32 ttft=   610.9ms total=   670.8ms chunks=8
+EXP006_OK -> /home/mr/projects/科研训练2.0/experiments/exp_006_engine_ttft/raw/engine_ttft_results.json

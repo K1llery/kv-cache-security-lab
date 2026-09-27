@@ -1,0 +1,21 @@
+# exp_003: 上游 aesgcm 端到端示例（钉死可运行组合，验证真实 L2 命中与解密）
+# 参数来源标注（08 纪律）：
+#   overview_doc    = 集大成_项目总览与迁移指南 §7/§9
+#   upstream_example= LMCache@9a7b605 examples/serde/aesgcm/run_serde_aesgcm_example.sh 默认值
+#   local_adapt     = 本机 12GB 显存/903GB ext4 的本地适配（记录在案，非上游默认）
+
+model: /home/mr/projects/科研训练2.0/experiments/models/Qwen2.5-0.5B-Instruct   # source: overview_doc（0.5B–3B 约束）
+l1_size_gb: 2          # source: overview_doc（"L1 限 ~2 GB，勿照搬上游 8B/20GB 默认"）；上游默认 20
+gpu_mem_util: 0.35     # source: local_benchmark（0.5 导出时 OOM；0.35 可启动并完成 engine_driven 闭环）；上游默认 0.6
+transfer_mode: engine_driven  # source: upstream_code/docs（固定版本支持 worker 侧拷贝；避免本机失败的 CUDA IPC 导入）
+default_transfer_mode: lmcache_driven  # source: upstream_example（仅保留失败诊断，不用于本次成功路径）
+cache_salt: "tenant-a" # source: upstream_example
+aes_bits: 128          # source: upstream_example
+vllm_port: 8321        # source: local_adapt（避开常用 8000）
+lmcache_port: 6555     # source: upstream_example
+lmcache_http_port: 8080 # source: upstream_example
+tmp_dir: /home/mr/projects/科研训练2.0/experiments/exp_003_upstream_example/runtime  # source: local_adapt（默认 /tmp，改到实验目录便于留档）
+# 判定标准（source: upstream_example README "What to check" + 总览 §7 第1-3天）：
+#  1) 第二次请求命中 L2 且无 InvalidTag；日志出现 Prefetch request completed (L1+L2)
+#  2) 盘上对象首字节 = 0x01（帧版本），非原始 KV
+#  3) 两次 HTTP 推理成功；第二次须有 0 L1 / 4 L2 命中（本次不据两次请求判断 TTFT 性能）

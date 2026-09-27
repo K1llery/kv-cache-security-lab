@@ -1,0 +1,12 @@
+[P=8192] aead_layer         median     357ms min     349 max     408 SC2=True
+[P=8192] aead_layer_batch   median     376ms min     357 max     439 SC2=True
+EXP009_WINDOWSWEEP_OK -> windowsweep_W1_results.json
+[P=8192] aead_layer         median     363ms min     346 max     435 SC2=True
+[P=8192] aead_layer_batch   median     363ms min     349 max     401 SC2=True
+EXP009_WINDOWSWEEP_OK -> windowsweep_W2_results.json
+[P=8192] aead_layer         median     351ms min     333 max     391 SC2=True
+[P=8192] aead_layer_batch   median     349ms min     338 max     394 SC2=True
+EXP009_WINDOWSWEEP_OK -> windowsweep_W4_results.json
+[P=8192] aead_layer         median     328ms min     318 max     380 SC2=True
+[P=8192] aead_layer_batch   median     341ms min     320 max     354 SC2=True
+EXP009_WINDOWSWEEP_OK -> windowsweep_W8_results.json
